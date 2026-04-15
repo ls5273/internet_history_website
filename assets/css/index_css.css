@@ -1,0 +1,158 @@
+body{
+    font-family: sans-serif;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 100%;
+}
+
+header {
+    position: sticky;
+    top: 0.3em;
+    border: 1px solid #ffe2eb;
+    border-radius: 2em;
+    background-color: #ffe2eb;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 2em;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    left: auto; 
+    padding-right: 1em;
+    top: 35%;
+    font-size: 1.1rem;
+}
+
+h2 {
+    color:#f7a1be;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+hr{
+    border-top: 2.5px solid #f7a1be;
+}
+
+figcaption { 
+    font-weight: bold;
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+img {
+    width: 30vw;
+    height: auto;
+    border-radius: 2em;
+    padding-left: 1em;
+    padding-right: 0;
+    padding-top: 1em;
+}
+
+a:link{
+    color: #be5d84;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited{
+    color: #be5d84;
+}
+
+a:hover{
+    color: #f7a1be;
+}
+
+a:active{
+    color: white;
+}
+
+footer h2 {
+    text-align: center;
+}
+
+footer {
+    border: 1px solid #ffe2eb;
+    border-radius: 2em;
+    background-color: #ffe2eb;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    padding-left: 1em;
+    padding-right: 1em; 
+    margin-bottom: 0;
+    margin-top: 2em;
+}
+
+footer a:link{
+    color: #be5d84;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+footer a:visited{
+    color: #be5d84;
+}
+
+footer a:hover{
+        color: #b23869;
+    }
+
+footer a:active{
+        color: white;
+    }
+    
+
+@media screen and (max-width: 1400px) {
+    nav {
+        position: static;
+        text-align: center;
+        padding-top: 0.3em;
+        padding-bottom: 0.5em;
+    }
+} 
+
+
+@media screen and (max-width: 800px) {
+    h1 {font-size: 2.3rem;}
+    h2 {font-size: 1.3rem;}
+    img {
+        width: 50vw;
+        display: block;
+        margin-left: auto;
+        margin-right:auto;
+    }
+} 
+
+
+@media screen and (max-width: 600px) {
+    h2 {font-size: 1.2rem;}
+    nav {font-size: 1rem;}
+    h1 {font-size: 2rem;}
+} 
+
+
+@media screen and (min-width: 800px) {
+    .image_box{
+        display: flex; 
+        justify-content: center;
+        overflow-x: auto;
+        margin-top: 2em;
+        clear: both;
+    }
+}
+
+        
+

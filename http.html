@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+
+        <link rel="stylesheet" href="assets/css/http_css.css">
+         
+        <title>HTTP</title>
+
+    </head>
+
+        <body>
+            <header>
+                <h1>HTTP</h1>
+
+                <nav>
+                    <a href="index.html">Intro</a> |
+                    &nbsp;<a href="pioneers.html">Internet Pioneers</a> |
+                    &nbsp;<a href="http.html">HTTP</a> |
+                    &nbsp;<a href="topic.html">Wiki</a> |
+                    &nbsp;<a href="terminology.html">Terminology</a> |
+                    &nbsp;<a href="references.html">References</a> |
+                </nav>
+            </header>
+
+                <h2>How is a simple HTML page requested by a client and served 
+                    up by a web server using HTTP and/or HTTPS protocols?</h2>
+                            <hr />
+                            
+                        <p> The process of getting access to a simple HTML page begins with the 
+                            user entering or clicking on a URL (Uniform Resource Locator) on a web 
+                            browser [1], [2], [3]. The computer, also known as the client, is requesting 
+                            this resource from the web server. The requested URL is an IP address that 
+                            exists (should exist) and belongs to the server. The browser needs to convert 
+                            the human-readable domain name from the URL into an IP address using the DNS 
+                            server (Domain Name System). After the IP address is obtained, the client must 
+                            establish a TCP/IP connection with the web server. TCP protocol (Transmission 
+                            Control Protocol) is one of the main protocols, it is a communication protocol 
+                            that enables message exchange over a network. IP (Internet Protocol) is the address 
+                            system of the Internet, and it is fundamental for delivering information from the 
+                            source to the target. Together, TCP and IP create an Internet Protocol Suite 
+                            – TCP/IP – where IP protocol deals with routing and addressing the packets of 
+                            information, while the TCP protocol ensures delivery. </p>
+
+                <br />   
+
+                        <p> With a secure TCP/IP connection, the client sends an HTTP GET request to the server. 
+                            The request will have two lines. <br />
+                            The first line will contain: </p>
+                            <ol>
+                                <li>GET - an HTTP command to request a resource from the server</li>
+                                <li>The path of the resource being requested</li>
+                                <li>The version of the HTTP protocol being used</li>
+                            </ol>
+
+                        <p> The second line will contain the domain name to which the request is being 
+                            sent - the address of the server. </p>
+
+                        <p> For example: <br />
+                            &nbsp;&nbsp; GET /index.html HTTP/1.1 <br />
+                            &nbsp;&nbsp; Host: www.index_example.com </p>
+
+                        <p> There may be additional lines in the request depending on the data that the 
+                            web browser chooses to send. <br />
+                            Such lines would be: </p>
+                            <ol>
+                                <li>Information about making the request</li>
+                                <li>Information on the type of data the browser is allowing to accept.</li>
+                            </ol>
+                        
+                        <p> If an HTTPS protocol is being used, the browser will first initiate a secure 
+                            connection in order to encrypt the communication before sending an HTTP request. </p>
+                      
+                <br />
+
+                        <p> After the server receives the HTTP request from the client, it first checks if the 
+                            resource exists. If the server has found the resource, it then sends a positive response. 
+                            The response will consist of the header and the requested content. <br />
+                            The header will have: </p>
+                            <ol>
+                                <li>A confirmation that the server understands the protocol that the client 
+                                    wants to communicate with</li>
+                                <li>The HTTP status code – if the resource is found on the server, it will be: 
+                                    200 Success / OK.</li>
+                            </ol>
+
+                        <p> For example: <br />
+                            &nbsp;&nbsp; HTTP/1.1 200 OK <br />
+                            &nbsp;&nbsp; Content-Type: text/html </p>
+
+                        <p> The header might also contain other information such as: content-type, content-length, 
+                            date, and connection. The header is then followed by the requested content. </p>
+                        
+                <br />
+
+                        <p> Not every server’s response will be positive, and the HTTP status code will be the one informing 
+                            the client about it. For example, if the server is not able to find the requested resource, it will 
+                            respond with a header that has an HTTP status code: 404 NOT FOUND. The header will then, of course, 
+                            not be followed by the requested content. </p>
+
+                        <p> For example: <br />
+                            &nbsp;&nbsp; HTTP/1.1 404 NOT FOUND </p>
+
+                <br />
+                        
+                        <p> After the client receives a positive response, it renders the requested content - in this case, 
+                            the HTML page - and displays it on the screen [1], [2], [3]! </p>
+
+                <br />
+
+                <h2>Diagram</h2>
+                        <hr />
+                    <figure>
+                        <img src="assets/media/diagram.jpg" alt="HTTP Diagram" width="419" height="1066">
+                        <figcaption>Fig.1 - HTTP Diagram</figcaption>
+                    </figure>
+
+            <footer>
+                <h2><a href="assets/media/http.pdf">Print PDF</a></h2>
+            </footer>
+
+        </body>
+</html>
